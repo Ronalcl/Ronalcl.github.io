@@ -1,0 +1,35 @@
+.cardSize {
+    font-size: 20px;
+    height: 250px;
+    width: 190px;
+}
+.snow {
+    background-image: url();
+    height: 30px;
+    font-size: 60px;
+}
+.rain {
+    background-image: url();
+    height: 30px;
+    font-size: 60px;
+}
+.sunny{
+    background-image: url();
+    height: 30px;
+    font-size: 60px;
+}
+.cloudy{
+    background-image: url();
+    height: 30px;
+    font-size: 60px;
+}
+.tornado{
+    background-image: url();
+    height: 30px;
+    font-size: 60px;
+    }
+.storm{
+    background-image: url();
+    height: 30px;
+    font-size: 60px;
+}
