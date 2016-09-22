@@ -3,33 +3,71 @@
     height: 250px;
     width: 190px;
 }
-.snow {
-    background-image: url();
-    height: 30px;
-    font-size: 60px;
+.snowy {
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRFuAXIzOjYdhwcKX2FNVlbabsGu2zdOJG6X9jJjaA7GKIKItFC0g");
+    font-size: 20px;
+    height: 300px;
+    width: 0px;
+    background-repeat: no-repeat; 
 }
 .rain {
-    background-image: url();
-    height: 30px;
-    font-size: 60px;
+    background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS_uiB20cK1v1a0t3DTS9wzuC_m2HVZWK4dcPtUS4pIW3sah7fe");
+    font-size: 20px;
+    height: 300px;
+    width: 0px;
+    background-repeat: no-repeat; 
 }
 .sunny{
-    background-image: url();
-    height: 30px;
-    font-size: 60px;
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTHIx6wPFH33VM9xkJgd2zojeKRRKFmIzIj4A5xADdlYTvKSzOqhA");
+    font-size: 20px;
+    height: 300px;
+    width: 0px;
+    background-repeat: no-repeat; 
 }
 .cloudy{
-    background-image: url();
-    height: 30px;
-    font-size: 60px;
+    background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSXtRaLC7ozljI1YwzWXCDHe8NDsM0tVc-ProkIvZhjEbzR7bWM");
+    font-size: 20px;
+    height: 300px;
+    width: 0px;
+    background-repeat: no-repeat; 
 }
 .tornado{
-    background-image: url();
-    height: 30px;
-    font-size: 60px;
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ9Wtc6LZGgEQHuYnDUKSom30pY4q1zdzNkamUI8PdfzEhmmBLCsw");
+    font-size: 20px;
+    height: 300px;
+    width: 0px;
+    background-repeat: no-repeat; 
     }
 .storm{
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRFuAXIzOjYdhwcKX2FNVlbabsGu2zdOJG6X9jJjaA7GKIKItFC0g");
+    font-size: 20px;
+    height: 300px;
+    width: 0px;
+    background-repeat: no-repeat; 
+}
+.holder{
     background-image: url();
     height: 30px;
     font-size: 60px;
+    color: white;
+}
+.imgTxt{
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    font-size: 34px;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+   
+}
+.emoticon{
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    font-size: 34px;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+   
 }
