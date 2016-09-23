@@ -13,42 +13,73 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="creative_theme/css/creative.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      </a>
-            </div>
-        </div>
-    </nav>
+
 </head>
 
 <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Ronalcl</a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active "><a href="http://www.facebook.com/sharer.php" target="_Blank"><button class="btn-facebook fb"> Share me on FaceBook! </button> <span class="sr-only">(current)</span></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Wut?</a></li>
+                    <li class="dropdown">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">Bucket'O'Links<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Enjoy.</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Surprise.</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Have fun.</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Gotcha</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="postCode" placeholder="Postal Code">
+                    </div>
+                    <button type="button" id="postalCodeWeather" id="postCode" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://www.youtube.com/watch?v=WFbRknwbGFQ">3,6,9</a></li>
+                    <li class="dropdown">
+                        <a href="https://www.youtube.com/watch?v=WFbRknwbGFQ" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">3,6,9<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Too Tired </a></li>
+                            <li><a href="#">No where's yet</a></li>
+                            <li><a href="#">Coming Soon!</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">but not this soon...</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="row">
-            <div class="col-xs-2"></div>
-            <div class="col-xs-2 snowy">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"></div>
-                </div>
-            </div>
-            <div class="col-xs-2 rain">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4 emoticon"> </div>
-                </div>
-            </div>
-            <div class="col-xs-2 tornado">
+            <div class="col-xs-4 cloudy">
                 <div class="row">
                     <div class="col-xs-4"></div>
                     <div class="col-xs-4 imgTxt"> 80'
@@ -57,74 +88,116 @@
                     <div class="col-xs-4"> </div>
                 </div>
             </div>
-            <div class="col-xs-2"> </div>
-            <div class="col-xs-2"> </div>
+            <div class="col-xs-4 snowy">
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4 imgTxt"> 80'
+                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
+                    </div>
+                    <div class="col-xs-4"> </div>
+                </div>
+            </div>
+            <div class="col-xs-4 rain">
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4 imgTxt"> 80'
+                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
+                    </div>
+                    <div class="col-xs-4"> </div>
+                </div>
+            </div>
+            <div class="col-xs-4 sunny">
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4 imgTxt"> 80'
+                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
+                    </div>
+                    <div class="col-xs-4"> </div>
+                </div>
+            </div>
+            <div class="col-xs-4 tornado">
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4 imgTxt"> 80'
+                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
+                    </div>
+                    <div class="col-xs-4"> </div>
+                </div>
+            </div>
+            <div class="col-xs-4 storm">
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4 imgTxt"> 80'
+                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
+                    </div>
+                    <div class="col-xs-4"> </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container holder">
-        <div class="row">
-            <div class="col-xs-2"></div>
-            <div class="col-xs-2"></div>
-            <div class="col-xs-2"></div>
-            <div class="col-xs-2"></div>
-            <div class="col-xs-2"></div>
-            <div class="col-xs-2"></div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-2"> </div>
-            <div class="col-xs-2 sunny">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
-            <div class="col-xs-2 storm">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
-            <div class="col-xs-2 cloudy">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
-            <div class="col-xs-2"> </div>
-            <div class="col-xs-2"> </div>
-        </div>
-        <script>
-$(document).ready(function() {
+    <script>
+
+        function LatLong_Complete(result) {
+            var latitude = result.results["0"].geometry.location.lat;
+            var longitude = result.results["0"].geometry.location.lng;
+            var local = latitude + "," + longitude;
+            
+            console.log("The latitude and longitude is " + latitude + ", " + longitude);
+        }
+
+        function LatLong(city, state, postCode) {
+           
+            var address = "";
+            if (postCode.length != 0) {
+                address = postCode.trim();
+            }
+            else if (city.length != 0 && state != 0) {
+                address = city.trim() + ", " + state;
+            }
+            else {
+                return; // they didn't give me anything valid, so exit 
+            }
+
+            var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyDkN5p4kquTOqQ_1ZHFdEkZk2MIMbZhFy0";
+
+            var request = {
+                url: googleUrl,
+                success: LatLong_Complete
+            };
+
+            $.ajax(request); 
+        }
+
+        function postalCodeWeather_Click() {
+            var zipCode = $("#postCode").val();
+            LatLong("", "", zipCode);
+        }
+        function tellMeWeather() {
+            var local = $("latitude + ',' + longitude");
+        }
+
+        $(function() {
+            $("#postalCodeWeather").on("click", postalCodeWeather_Click)
+        })
+        $(document).ready(function() {
 function darksky_Complete(result) {
     console.log(result.currently.summary);
      
 }
-
 $(function() {
     
     var request = {
- url:"https://api.darksky.net/forecast/" + "18ed8459484711603ec79b3586a698bc" + "/37.8267,-122.4233", 
+ url:"https://api.darksky.net/forecast/18ed8459484711603ec79b3586a698bc/" + "37.8267,-122.4233",
 dataType: "jsonp", // mostly needed with darksky //
 success: darksky_Complete
+
 
  }
 
     $.ajax(request);
 });
 });
-//     var x = document.getElementById("https://maps.googleapis.com/maps/api/geocode/json?address=41777&key=AIzaSyDkN5p4kquTOqQ_1ZHFdEkZk2MIMbZhFy0");
-// function getLocal() HAD MORE but none worked, so DELETE;
+
 
 </script>
 </body>
