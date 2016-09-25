@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Weather</title>
+    <title>Weather.ly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Our project CSS -->
     <link rel="stylesheet" href="bootstrapfun.css">
@@ -17,6 +17,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <!-- JAVA SCRIPT FILE -->
+    <script src="indexMain.js"> </script>
 
 </head>
 
@@ -25,32 +27,31 @@
         <div class="container-fluid">
 
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                <button type="button" onclick="generateData" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                     aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                <a class="navbar-brand" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Ronalcl</a>
+                <a class="navbar-brand" href="#" target="_blank">Weather.ly</a>
             </div>
 
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active "><a href="http://www.facebook.com/sharer.php" target="_Blank"><button class="btn-facebook fb"> Share me on FaceBook! </button> <span class="sr-only">(current)</span></a></li>
-                    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Wut?</a></li>
+                    <li><a href="#" target="_Blank">More weather?</a></li>
                     <li class="dropdown">
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Bucket'O'Links<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Even more weather?<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Enjoy.</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Surprise.</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Something else here</a></li>
+                            <li><a href="#" target="_Blank">Enjoy.</a></li>
+                            <li><a href="#" target="_Blank">Surprise.</a></li>
+                            <li><a href="#" target="_Blank">Something else here</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Have fun.</a></li>
+                            <li><a href="#" target="_Blank">Have fun.</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_Blank">Gotcha</a></li>
+                            <li><a href="#" target="_Blank">Gotcha</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -58,14 +59,13 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="postCode" placeholder="Postal Code">
                     </div>
-                    <button type="button" id="postalCodeWeather" id="postCode" class="btn btn-default">Submit</button>
+                    <button type="button" id="postalCodeWeather" id="postCode" class="btn btn-default" onclick="generateData()">Submit</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://www.youtube.com/watch?v=WFbRknwbGFQ">3,6,9</a></li>
+                    <li><a href="#">Instantly awesome</a></li>
                     <li class="dropdown">
-                        <a href="https://www.youtube.com/watch?v=WFbRknwbGFQ" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">3,6,9<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Too Tired </a></li>
                             <li><a href="#">No where's yet</a></li>
                             <li><a href="#">Coming Soon!</a></li>
                             <li role="separator" class="divider"></li>
@@ -77,129 +77,50 @@
         </div>
     </nav>
 
+
+
+
+
     <div class="container">
-        <div class="row">
-            <div class="col-xs-4 cloudy">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
-            <div class="col-xs-4 snowy">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
-            <div class="col-xs-4 rain">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
-            <div class="col-xs-4 sunny">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
-            <div class="col-xs-4 tornado">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
-            <div class="col-xs-4 storm">
-                <div class="row">
-                    <div class="col-xs-4"></div>
-                    <div class="col-xs-4 imgTxt"> 80'
-                        <hr /><span class="glyphicon glyphicon-tint" aria-hidden="true"><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></span>
-                    </div>
-                    <div class="col-xs-4"> </div>
-                </div>
-            </div>
+
+        <div id="deck" class="row">
         </div>
+
     </div>
-    <script>
-
-        function LatLong_Complete(result) {
-            var latitude = result.results["0"].geometry.location.lat;
-            var longitude = result.results["0"].geometry.location.lng;
-            var local = latitude + "," + longitude;
-            
-            console.log("The latitude and longitude is " + latitude + ", " + longitude);
-        }
-
-        function LatLong(city, state, postCode) {
-           
-            var address = "";
-            if (postCode.length != 0) {
-                address = postCode.trim();
-            }
-            else if (city.length != 0 && state != 0) {
-                address = city.trim() + ", " + state;
-            }
-            else {
-                return; // they didn't give me anything valid, so exit 
-            }
-
-            var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyDkN5p4kquTOqQ_1ZHFdEkZk2MIMbZhFy0";
-
-            var request = {
-                url: googleUrl,
-                success: LatLong_Complete
-            };
-
-            $.ajax(request); 
-        }
-
-        function postalCodeWeather_Click() {
-            var zipCode = $("#postCode").val();
-            LatLong("", "", zipCode);
-        }
-        function tellMeWeather() {
-            var local = $("latitude + ',' + longitude");
-        }
-
-        $(function() {
-            $("#postalCodeWeather").on("click", postalCodeWeather_Click)
-        })
-        $(document).ready(function() {
-function darksky_Complete(result) {
-    console.log(result.currently.summary);
-     
-}
-$(function() {
-    
-    var request = {
- url:"https://api.darksky.net/forecast/18ed8459484711603ec79b3586a698bc/" + "37.8267,-122.4233",
-dataType: "jsonp", // mostly needed with darksky //
-success: darksky_Complete
 
 
- }
+    <!-- TEMPLATE DIVS -->
 
-    $.ajax(request);
-});
-});
+    <div style="display: none" id="templateDiv" >
+
+        <div class="col-xs-3 bckImg" style="margin: 40px;" >
+        <button></button>
+        <div class="row" style="text-align: center; border: 2px solid #00d0ff;";>  </div>
+        <div class="row"  style="text-align: center; border: 2px solid #00d0ff;";>@@PLACE@@</div>
+        <div class="row"  style="text-align: center; border: 2px solid #00d0ff;";>@@TEMP@@</div>
+        <div class="row" style="text-align: center; border: 2px solid #00d0ff;";>@@WEATHERNOW@@</div>
+        <div class="row" style="text-align: center; border: 2px solid #00d0ff;";>@@PLACE@@
+            <div class="col-md-4" style="text-align: center; border: 2px solid #00d0ff;";>@@HIGHTEMP@@</div>
+            <div class="col-md-4" style="text-align: center; border: 2px solid #00d0ff;";>@@RAINCHANCE@@</div>
+            <div class="col-md-4" style="text-align: center; border: 2px solid #00d0ff;";>@@LOWTEMP@@</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4" style="text-align: center; border: 2px solid #00d0ff;";>High</div>
+            <div class="col-md-4" style="text-align: center; border: 2px solid #00d0ff;";>Percip</div>
+            <div class="col-md-4" style="text-align: center; border: 2px solid #00d0ff;";>Low</div>
+        </div>
+</div>
+
+</div>
 
 
-</script>
+
+
+
+
+
+
 </body>
 
 </html>

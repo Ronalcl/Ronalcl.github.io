@@ -1,14 +1,18 @@
-.cardSize {
+.deck {
     font-size: 20px;
     height: 250px;
     width: 190px;
 }
-.snowy {
-    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRFuAXIzOjYdhwcKX2FNVlbabsGu2zdOJG6X9jJjaA7GKIKItFC0g");
-    font-size: 20px;
-    height: 300px;
-    width: 0px;
+.bckImg{
+  
+    height: 450px;
+   background-repeat: no-repeat;
+    background-image: url("http://l.yimg.com/os/mit/media/m/weather/images/fallbacks/lead/clear_d-1394274.jpg");
+}
+.cardOne{
+    position: relative;
     background-repeat: no-repeat; 
+    background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRekW_-OqXcHAk0sh2AtFraZhMFb4G-xfsddauBY35MNOzVOATS");
 }
 .rain {
     background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS_uiB20cK1v1a0t3DTS9wzuC_m2HVZWK4dcPtUS4pIW3sah7fe");
@@ -83,9 +87,7 @@
     position: absolute;
     
 }
-hr{
-    width: 100%;
-}
+
 
 .fb{
     background-color: #3B5998 !important ; 
