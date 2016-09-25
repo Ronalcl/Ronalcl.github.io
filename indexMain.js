@@ -9,7 +9,7 @@ function createCard(formCard) {
 
     return template;
 
-}
+} 
 
 
 function generateData() {
