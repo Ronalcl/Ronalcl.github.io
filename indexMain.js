@@ -1,34 +1,3 @@
-function createCard(formCard) {
-    var template = $("#templateDiv").html();
-
-
-    template = template.replace("@@IMAGEURL@@", formCard.photoUrl);
-    template = template.replace("@@PLACE@@", formCard.place);
-    template = template.replace("@@WEATHERNOW@@", formCard.currentOutlook);
-    template = template.replace("@@TEMP@@", formCard.tempNow);
-
-    return template;
-
-} 
-
-
-function generateData() {
-    var dataTest = {
-        place: "TEKY, KY",
-        currentOutlook: "Hellfire",
-        tempNow: "132",
-        photoUrl: "http://l.yimg.com/os/mit/media/m/weather/images/fallbacks/lead/clear_d-1394274.jpg"
-    };
-    var html = createCard(dataTest);
-    $("#deck").append(html);
-
-
-}
-
-
-
-
-
 
 function LatLong_Complete(result) {
     var lat = result.results["0"].geometry.location.lat;
@@ -82,8 +51,34 @@ $(function () {
     $("#postalCodeWeather").on("click", postalCodeWeather_Click)
 })
 function darksky_Complete(result) {
-    console.log(result.currently.summary);
-};
+    console.log(result.currently.temperature);
+}; 
+function createCard(formCard) {
+    var template = $("#templateDiv").html();
+
+
+    template = template.replace("@@IMAGEURL@@", formCard.photoUrl);
+    template = template.replace("@@PLACE@@", formCard.place);
+    template = template.replace("@@WEATHERNOW@@", formCard.currentOutlook);
+    template = template.replace("@@TEMP@@", formCard.tempNow);
+
+    return template;
+
+} 
+
+
+function generateData() {
+    var dataTest = {
+        place: "TEKY, KY",
+        currentOutlook: "Hellfire",
+        tempNow: "132",
+        photoUrl: "http://l.yimg.com/os/mit/media/m/weather/images/fallbacks/lead/clear_d-1394274.jpg"
+    };
+    var html = createCard(dataTest);
+    $("#deck").append(html);
+
+
+}
 
 $(document).ready(function () {
 });
