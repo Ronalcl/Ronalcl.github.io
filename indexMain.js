@@ -1,10 +1,11 @@
-
+areaOf = "";
 function LatLong_Complete(result) {
     var lat = result.results["0"].geometry.location.lat;
     var lng = result.results["0"].geometry.location.lng;
     var local = lat + "," + lng;
+    areaOf =result.results["0"].formatted_address;
 
-    console.log("The latitude and longitude is " + lat + ", " + lng);
+    
 
     var darkSkyUrl = "https://api.darksky.net/forecast/18ed8459484711603ec79b3586a698bc/" + lat + "," + lng;
     var request = {
@@ -51,8 +52,17 @@ $(function () {
     $("#postalCodeWeather").on("click", postalCodeWeather_Click)
 })
 function darksky_Complete(result) {
-    console.log(result.currently.temperature);
-}; 
+    lo = result.daily.data["0"].temperatureMin;
+    rain = result.currently.precipProbability;
+    hi = result.daily.data["0"].temperatureMax;
+    outLook = result.currently.summary;
+    tempNow = result.currently.temperature;
+    
+    
+    generateData();
+
+
+};
 function createCard(formCard) {
     var template = $("#templateDiv").html();
 
@@ -61,18 +71,27 @@ function createCard(formCard) {
     template = template.replace("@@PLACE@@", formCard.place);
     template = template.replace("@@WEATHERNOW@@", formCard.currentOutlook);
     template = template.replace("@@TEMP@@", formCard.tempNow);
+    template = template.replace("@@LO@@", formCard.lows);
+    template = template.replace("@@HI@@", formCard.heighs);
+    template = template.replace("@@RAIN@@", formCard.percip);
+    
 
     return template;
 
-} 
+} $("#removeIt").click(function(){
+    $("#deck").remove();
+});
 
 
 function generateData() {
     var dataTest = {
-        place: "TEKY, KY",
-        currentOutlook: "Hellfire",
-        tempNow: "132",
-        photoUrl: "http://l.yimg.com/os/mit/media/m/weather/images/fallbacks/lead/clear_d-1394274.jpg"
+        percip: rain,
+        heighs: hi,
+        lows: lo,
+        place: areaOf,
+        currentOutlook: outLook,
+        tempNow: tempNow,
+        photoUrl: "https://cdn0.iconfinder.com/data/icons/easter-vol-01-4/32/spring-sun-happy-weather-easter-season-512.png"
     };
     var html = createCard(dataTest);
     $("#deck").append(html);
