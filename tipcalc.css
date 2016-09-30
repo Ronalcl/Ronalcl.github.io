@@ -1,6 +1,6 @@
 .center_div{
     top: 210px;
-   
+   background-size: cover;
      border: 1px solid purple;
      background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQNP3EF3h_MAmgALhD80r_co7THsuRR0-7O1WcnKDvCzqsBC7-O");
      background-repeat: no-repeat;
@@ -8,7 +8,7 @@
 
 .bckground{
     background-image: url("http://images.freeimages.com/images/previews/cf2/fancy-dinner-setting-1328871.jpg");
-    background-size: 1600px 1600px;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .theText{
@@ -20,7 +20,7 @@
      border: 1px solid #3B5998;
      background-image: url("http://cbimg9.com/graphics/08/06/54995c.jpg");
      background-repeat: no-repeat;
-     background-size: 1600px 1600px;
+     background-size: cover;
 }
 .fb{
     background-color: #3B5998 !important ; 
