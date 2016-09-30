@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <title>Weather.ly</title>
+    <title>Map.ly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Our project CSS -->
-    <link rel="stylesheet" href="bootstrapfun.css">
+    <link rel="stylesheet" href="maply.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -18,10 +18,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <!-- JAVA SCRIPT FILE -->
-    <script src="indexMain.js"> </script>
+    <script src="maply.js"> </script>
     
 </head>
-
 <body class="bckground">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -32,43 +31,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                <a class="navbar-brand" href="#" target="_blank">Weather.ly</a>
+                <a class="navbar-brand" href="#" target="_blank">Map.ly</a>
             </div>
-
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active "><a href="http://www.facebook.com/sharer.php" target="_Blank"><button class="btn-facebook fb"> Share me on FaceBook! </button> <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#" target="_Blank">More weather?</a></li>
+                    <li><a href="#" target="_Blank">Maps!</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Even more weather?<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" target="_Blank">Enjoy.</a></li>
-                            <li><a href="#" target="_Blank">Surprise.</a></li>
-                            <li><a href="#" target="_Blank">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#" target="_Blank">Have fun.</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#" target="_Blank">Gotcha</a></li>
-                        </ul>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Even more maps?<span class="caret"></span></a>
                     </li>
                 </ul>
                 <form class="navbar-form navbar-left">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="postCode" placeholder="Postal Code">
+                        <input type="text" class="form-control" id="postCode" placeholder="Postal Code || Location">
                     </div>
                     <button type="button" id="postalCodeWeather" id="postCode" class="btn btn-default" onclick="generateData()">Submit</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Instantly awesome</a></li>
+                    <li><a href="#">Instant maps!</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">No where's yet</a></li>
-                            <li><a href="#">Coming Soon!</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">but not this soon...</a></li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -78,7 +61,7 @@
 
 
 
-
+<form>
     <div class="container">
 
         <div id="deck" class="row">
@@ -87,40 +70,32 @@
     </div>
 
 
-    <!-- TEMPLATE DIVS -->
+    <!-- TEMPLATES -->
 
     <div style="display: none" id="templateDiv" >
 
         <div class="col-xs-3 bckImg" style="margin: 40px;" >
-     <div>   <button id="removeIt"></button> </div>
-        <div class="row imgTxt" style="text-align: center; border: 2px solid #ffff00;";>  </div>
-        <div class="row imgTxt"  style="text-align: center; border: 2px solid #ffff00;";>@@PLACE@@</div>
-        <div class="row imgTxt"  style="text-align: center; border: 2px solid #ffff00;";>@@TEMP@@</div>
-        <div class="row imgTxt" style="text-align: center; border: 2px solid #ffff00;";>@@WEATHERNOW@@</div>
-        <div class="row imgTxt" style="text-align: center; border: 2px solid #ffff00;";>LOW
-            <div class="col-md-4 imgTxt" style="text-align: center; border: 2px solid #ffff00;";>HIGH</div>
-            <div class="col-md-4 imgTxt" style="text-align: center; border: 2px solid #ffff00;";>RAIN</div>
-           
-        </div>
-
-        <div class="row imgTxt">
-            <div class="col-md-4 imgTxt" style="text-align: center; border: 2px solid #ffff00;";>@@HI@@</div>
-            <div class="col-md-4 imgTxt" style="text-align: center; border: 2px solid #ffff00;";>@@RAIN@@</div>
-            <div class="col-md-4 imgTxt" style="text-align: center; border: 2px solid #ffff00;";>@@LO@@</div>
-        </div>
+     
+        <div class="row imgTxt" style="text-align: center; border: 2px solid #333333;";>
+            <div class="col-md-4 imgTxt" style="text-align: center;";>@@PLACE@@</div>
+         <div style="text-decoration:none; overflow:hidden; height:500px; width:500px; max-width:100%;"><div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="@@IMAGEURL@@"></iframe></div><a class="google-map-code-enabler" rel="nofollow" href="http://www.szablonypremium.pl" id="grab-map-info">jest tu</a><style>#embedded-map-display img{max-width:none!important;background:none!important;font-size: inherit;}</style></div><script src="https://www.szablonypremium.pl/google-maps-authorization.js?id=b2bcd27d-276a-89d5-d2ce-98da28f277bc&c=google-map-code-enabler&u=1475249764" defer="defer" async="async"></script>
+        </div> <center> <button style="font-size: 40px;">Reset! </button> </center></form>
 </div>
 
 </div>
+<!-- You will be able to use any resources you can find EXCEPT other students' code and TAs. --> 
 
 
 <script> areaOf = "";
+         placeInsert = "";
+         googleMap = "https://www.szablonypremium.pl/google-maps-authorization.js?id=b2bcd27d-276a-89d5-d2ce-98da28f277bc&c=google-map-code-enabler&u=1475249764"
 function LatLong_Complete(result) {
     var lat = result.results["0"].geometry.location.lat;
     var lng = result.results["0"].geometry.location.lng;
     var local = lat + "," + lng;
     areaOf =result.results["0"].formatted_address;
-
-    
+    placeInsert ="https://www.google.com/maps/embed/v1/place?q=" + areaOf + "&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU";
+    console.log(placeInsert)
 
     var darkSkyUrl = "https://api.darksky.net/forecast/18ed8459484711603ec79b3586a698bc/" + lat + "," + lng;
     var request = {
@@ -142,7 +117,7 @@ function LatLong(city, state, postCode) {
         address = city.trim() + ", " + state;
     }
     else {
-        return; // they didn't give me anything valid, so exit 
+        return; 
     }
 
     var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyDkN5p4kquTOqQ_1ZHFdEkZk2MIMbZhFy0";
@@ -154,7 +129,7 @@ function LatLong(city, state, postCode) {
 
     $.ajax(request);
 }
-
+console.log(areaOf)
 function postalCodeWeather_Click() {
     var zipCode = $("#postCode").val();
     LatLong("", "", zipCode);
@@ -168,7 +143,6 @@ $(function () {
 })
 function darksky_Complete(result) {
     lo = result.daily.data["0"].temperatureMin;
-    rain = result.currently.precipProbability;
     hi = result.daily.data["0"].temperatureMax;
     outLook = result.currently.summary;
     tempNow = result.currently.temperature;
@@ -182,13 +156,9 @@ function createCard(formCard) {
     var template = $("#templateDiv").html();
 
 
-    template = template.replace("@@IMAGEURL@@", formCard.photoUrl);
+    template = template.replace("@@IMAGEURL@@", formCard.mapIt);
     template = template.replace("@@PLACE@@", formCard.place);
-    template = template.replace("@@WEATHERNOW@@", formCard.currentOutlook);
-    template = template.replace("@@TEMP@@", formCard.tempNow);
-    template = template.replace("@@LO@@", formCard.lows);
-    template = template.replace("@@HI@@", formCard.heighs);
-    template = template.replace("@@RAIN@@", formCard.percip);
+
     
 
     return template;
@@ -200,7 +170,7 @@ function createCard(formCard) {
 
 function generateData() {
     var dataTest = {
-        percip: rain,
+        mapIt: placeInsert,
         heighs: hi,
         lows: lo,
         place: areaOf,
@@ -229,3 +199,4 @@ $(document).ready(function () {
 </body>
 
 </html>
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Guess.this</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Our project CSS -->
+    <link rel="stylesheet" href="guessGame.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="creative_theme/css/creative.css">-->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- JAVA SCRIPT FILE -->
+    <script src="indexMain.js"> </script>
+
+</head>
+
+<body class="bckground">
+
+
+
+
+    <div class="container">
+
+        <div>
+        </div>
+
+    </div>
+
+
+    <!-- TEMPLATE DIVS -->
+
+    <div>
+        <div class="row"> </div>
+        <div class="col-md-3 guessCards" style="text-align: center; border: 10px solid #d2b48c;" ;><input id="card1" class="card1Css" maxlength="1" type="number" value="1" min="0" max="9"></div>
+        <div class="col-md-3 guessCards" style="text-align: center; border: 10px solid #d2b48c;" ;><input id="card2" class="card2Css" maxlength="1" type="number" value="1" min="0" max="9"></div>
+        <div class="col-md-3 guessCards" style="text-align: center; border: 10px solid #d2b48c;" ;><input id="card3" class="card3Css" maxlength="1" type="number" value="1" min="0" max="9"></div>
+        <center>
+            <div class="col-m-12">
+                <button style="font-size:150px" id="mainClick" onclick="matchIt()" class="submitIt">Check!</button>
+            </div>
+        </center>
+
+
+
+
+
+<script>
+    function matchIt{
+        var math1 = Math.floor((Math.random() * 9) + 1);
+        var math2 = Math.floor((Math.random() * 9) + 1);
+        var math3 = Math.floor((Math.random() * 9) + 1);
+        var card1 = Number(document.getElementById('card1').value);
+        var card2 = Number(document.getElementById('card2').value);
+        var card3 = Number(document.getElementById('card3').value);
+        document.getElementById("card1").innerHTML= +Number(math1);
+        if(card1 == math1){
+           $("button").click(function(){
+    $("card1Css").css("background-color", "green");
+} if (card1 == math2 || math3){
+    $("button").click(function(){
+    $("card1Css").css("background-color", "yellow");
+    } else{ 
+$("button").click(function(){
+    $("card1Css").css("background-color", "red");
+}
+    }
+});
+
+</script>
+
+
+</body>
+
+</html>

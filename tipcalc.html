@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Our project CSS -->
+    <link rel="stylesheet" href="tipcalc.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+
+
+
+
+
+
+
+<body class="bckground">
+    <div class="container center_Div">
+        <div class="row center">
+            <div class="col-m-4"> </div>
+            <div class="col-m-4 theText formImage" style="text-align: center; border: 2px solid #B5998; border-radius: 30px; ;";>
+                <h1 class="theText">Find the correct amount to tip based on waiter/waitress service!</h1>
+                Service Given
+                <br>
+                 <select name="dropdown" id="serviceBased" type="text">
+<option value="0" selected>--Choose an Option--</option>
+<option value=".30">Great service?(30%)</option>
+<option value=".25">Good service?(25%)</option>
+<option value=".20">Decent service?(20%)</option>
+<option value=".15">Bad service?(15%)</option>
+<option value=".10"> Slimey service?(10%)</option>
+</select><p class="theText"> 
+ <form>       Bill Total: 
+        <br>
+        $<input name="Ronald"
+        max="999999"
+    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    type = "number" maxlength = "6" id="bill"
+    
+ />
+        <br>
+        People present to pay  
+        <br>  <input id="peeps" type="number" value="1" min="1">
+        <br>
+        <button type="button"  onclick="findTip()">Tip amount!</button>
+        <br>
+        <br>
+        Tip: <span id="tip"></span>
+        <br>
+        Total: <span id="total"></span>
+        <br>
+         <button>Reset!</button>
+        </p>
+       </form>
+       <a href="http://www.facebook.com/sharer.php" target="_Blank"><button class="btn-facebook fb"> Share via FaceBook! </button> <span class="sr-only">(current)</span></a>
+    </div>
+    </div>
+    <div class="col-m-4"> </div>
+    </div>
+
+<script> 
+function findTip() {
+        var serviceBased = Number(document.getElementById('serviceBased').value);
+        var bill = Number(document.getElementById('bill').value);
+        var billLength = bill.length; 
+        var peeps = Number(document.getElementById('peeps').value);
+        var tip = bill * serviceBased;
+        var tipEach = tip / peeps;
+        var total_bill = (bill + tip) / peeps;
+if(bill == ""){
+     alert("Enter a valid amount");
+        return false;
+}
+if(peeps == ""){
+     alert("Enter a valid amount");
+        return false;
+}
+if(serviceBased == "0"){
+    alert("Please make a selection based on service")
+}
+
+        document.getElementById("tip").innerHTML= "$"+Number(tipEach).toFixed(2)+" each";
+        document.getElementById("total").innerHTML= "$"+Number(total_bill).toFixed(2)+" each";     
+           
+    }
+   
+
+    function resetBtn() {
+    document.getElementById("resetMe").reset();
+}
+</script>
+
+</body>
+
+</html>
